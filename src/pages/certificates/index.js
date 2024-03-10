@@ -5,14 +5,10 @@ import ProductCard from "@/components/productCard";
 
 import { useFunctions } from "@/lib/contextApi";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function Certificates() {
-  const {
-   
-    certificates,
-    getCertificates,
-    deleteCertificates,
-  } = useFunctions();
+function Certificates() {
+  const { certificates, getCertificates, deleteCertificate } = useFunctions();
 
   const router = useRouter();
   useEffect(() => {
@@ -21,7 +17,7 @@ export default function Certificates() {
 
   const handleDelete = (id) => {
     try {
-      deleteCertificates(id);
+      deleteCertificate(id);
       getCertificates();
       window.location.reload();
     } catch (error) {}
@@ -75,3 +71,4 @@ export default function Certificates() {
     </Layout>
   );
 }
+export default withAuth(Certificates);

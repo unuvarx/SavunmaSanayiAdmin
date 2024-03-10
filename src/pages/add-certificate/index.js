@@ -1,12 +1,13 @@
 import Layout from "@/lib/layout";
 import React, { useState } from "react";
 import styles from "@/pages/add-certificate/add-certificate.module.scss";
+import withAuth from "@/lib/withAuth";
 
 
 
 
 
-export default function AddCertificate() {
+const  AddCertificate = () => {
   const [file, setFile] = useState(null);
   const [certificateName, setCertificateName] = useState("");
 
@@ -67,3 +68,4 @@ export default function AddCertificate() {
     </Layout>
   );
 }
+export default withAuth(AddCertificate);

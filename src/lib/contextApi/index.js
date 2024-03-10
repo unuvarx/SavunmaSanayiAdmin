@@ -252,15 +252,7 @@ export const DataProvider = ({ children }) => {
       setIsWarning(true);
     }
   };
-  //   var ipAddress = HttpContext.Connection.RemoteIpAddress.ToString();
-
-  // var existingConnection = await _context.Connections
-  //     .FirstOrDefaultAsync(c => c.UserIPAddress == ipAddress && c.message == connections.message);
-
-  // if (existingConnection != null)
-  // {
-  //     return BadRequest("Bu IP adresi ve mesajla zaten bir kayıt mevcut.");
-  // }
+  
   const editMessage = async (id, checkboxValue) => {
     try {
       const formData = new FormData();

@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 import styles from "@/pages/add-media/add-media.module.scss";
 import TinyMCEEditor from "@/components/editor";
+import withAuth from "@/lib/withAuth";
 
-export default function AddMedia() {
+const AddMedia = () => {
   const [file, setFile] = useState(null);
   const [mediaTitle, setMediaTitle] = useState("");
 
@@ -70,3 +71,4 @@ export default function AddMedia() {
     </Layout>
   );
 }
+export default withAuth(AddMedia)

@@ -1,8 +1,9 @@
 import Layout from "@/lib/layout";
 import React, { useState } from "react";
 import styles from "@/pages/add-communication/add-communication.module.scss";
+import withAuth from "@/lib/withAuth";
 
-export default function AddCommunication() {
+const  AddCommunication = () => {
   const [adress, setAdress] = useState("");
   const [title, setTitle] = useState("");
   const [phone, setPhone] = useState("");
@@ -109,3 +110,4 @@ export default function AddCommunication() {
     </Layout>
   );
 }
+export default withAuth(AddCommunication);

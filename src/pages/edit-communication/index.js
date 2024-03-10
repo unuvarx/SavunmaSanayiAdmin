@@ -2,7 +2,8 @@ import Layout from "@/lib/layout";
 import React, { useState, useEffect } from "react";
 import styles from "@/pages/add-certificate/add-certificate.module.scss";
 import { useRouter } from "next/router";
-export default function EditCommunication() {
+import withAuth from "@/lib/withAuth";
+function EditCommunication() {
   const [adress, setAdress] = useState("");
   const [title, setTitle] = useState("");
   const [phone, setPhone] = useState("");
@@ -155,3 +156,6 @@ export default function EditCommunication() {
     </Layout>
   );
 }
+
+
+export default withAuth(EditCommunication);

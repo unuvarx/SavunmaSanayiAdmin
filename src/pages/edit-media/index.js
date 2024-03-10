@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import styles from "@/pages/edit-media/edit-media.module.scss";
 import TinyMCEEditor from "@/components/editor";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function EditMedia() {
+function EditMedia() {
   const [file, setFile] = useState(null);
   const [mediaTitle, setMediaTitle] = useState("");
   const [mediaDescription, setMediaDescription] = useState("");
@@ -109,3 +110,4 @@ export default function EditMedia() {
     </Layout>
   );
 }
+export default withAuth(EditMedia);

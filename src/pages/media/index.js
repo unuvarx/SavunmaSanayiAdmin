@@ -3,8 +3,9 @@ import React, { useEffect } from "react";
 import styles from "@/pages/media/media.module.scss";
 import { useFunctions } from "@/lib/contextApi";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function Media() {
+ function Media() {
   const { deleteMedia, medias, getMedias } = useFunctions();
 
   const router = useRouter();
@@ -78,3 +79,4 @@ export default function Media() {
     </Layout>
   );
 }
+export default withAuth(Media);

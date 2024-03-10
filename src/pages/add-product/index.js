@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 import styles from "@/pages/add-product/add-product.module.scss";
 import TinyMCEEditor from "@/components/editor";
+import withAuth from "@/lib/withAuth";
 
-export default function AddProduct() {
+function AddProduct() {
   const [file, setFile] = useState(null);
   const [productTitle, setProductTitle] = useState("");
   const [productText, setProductText] = useState("");
@@ -90,3 +91,4 @@ export default function AddProduct() {
     </Layout>
   );
 }
+export default withAuth(AddProduct);

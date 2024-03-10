@@ -5,8 +5,9 @@ import ProductCard from "@/components/productCard";
 
 import { useFunctions } from "@/lib/contextApi";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function Partners() {
+ function Partners() {
   const { deletePartners, partners, getPartners } =
     useFunctions();
 
@@ -77,3 +78,4 @@ export default function Partners() {
     </Layout>
   );
 }
+export default withAuth(Partners);

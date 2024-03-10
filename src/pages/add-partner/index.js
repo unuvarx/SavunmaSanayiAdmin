@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 import styles from "@/pages/add-product/add-product.module.scss";
 import TinyMCEEditor from "@/components/editor";
+import withAuth from "@/lib/withAuth";
 
-export default function AddPartner() {
+function AddPartner() {
   const [file, setFile] = useState(null);
 
   const handleFileChange = (e) => {
@@ -53,3 +54,4 @@ export default function AddPartner() {
     </Layout>
   );
 }
+export default withAuth(AddPartner);

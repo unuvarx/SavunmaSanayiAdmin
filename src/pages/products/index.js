@@ -5,8 +5,9 @@ import ProductCard from "@/components/productCard";
 
 import { useFunctions } from "@/lib/contextApi";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function Products() {
+ function Products() {
   const { products, getProducts, deleteProducts } = useFunctions();
 
   const router = useRouter();
@@ -80,3 +81,4 @@ export default function Products() {
     </Layout>
   );
 }
+export default withAuth(Products);

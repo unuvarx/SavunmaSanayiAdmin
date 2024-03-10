@@ -5,8 +5,9 @@ import ProductCard from "@/components/productCard";
 
 import { useFunctions } from "@/lib/contextApi";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function Communications() {
+function Communications() {
   const {
     certificates,
     getCertificates,
@@ -95,3 +96,4 @@ export default function Communications() {
     </Layout>
   );
 }
+export default withAuth(Communications);

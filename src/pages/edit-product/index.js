@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import styles from "@/pages/edit-product/edit-product.module.scss";
 import TinyMCEEditor from "@/components/editor";
 import { useRouter } from "next/router";
+import withAuth from "@/lib/withAuth";
 
-export default function EditProduct() {
+ function EditProduct() {
   const [file, setFile] = useState(null);
   const [productTitle, setProductTitle] = useState("");
   const [productText, setProductText] = useState("");
@@ -143,3 +144,4 @@ export default function EditProduct() {
     </Layout>
   );
 }
+export default withAuth(EditProduct);
