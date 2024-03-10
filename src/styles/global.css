@@ -1,0 +1,23 @@
+:root {
+  --background-color: #aaaaaa;
+  --dark-background-color: #3d4757;
+  --dark-color: #222;
+  --white-color: #ffffff;
+  --red-color: #c72931;
+  --grey-color: rgb(238, 238, 238);
+  --orange: rgb(220, 135, 61);
+}
+body {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  min-width: 1200px;
+  overflow-x: scroll;
+}
+
+* {
+  background-color: var(--dark-background-color);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s;
+}

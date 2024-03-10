@@ -1,0 +1,45 @@
+.navbarContainer {
+    background-color: var(--dark-color);
+    padding: 0.5rem;
+    min-height: 100vh;
+    height: 100%;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        background-color: transparent;
+        font-weight: bold;  
+
+        font-style: italic;
+        color: var(--white-color);  
+        width: -webkit-fill-available; 
+        text-align: center;
+        font-size: 2rem;
+    }
+    div {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        background-color: transparent;
+        a {
+           
+            background-color: transparent;
+          
+            text-decoration: none;
+            color: var(--grey-color);
+            font-size: 1.25rem;
+            width: -webkit-fill-available;
+            span {
+                background-color: var(--red-color);
+                padding: 0.25rem;
+                border-radius: 50%;
+            }
+        }
+    }
+    div:hover {
+        background-color: var(--grey-color);
+        a {
+            color: var(--dark-color);
+        }
+    }
+}

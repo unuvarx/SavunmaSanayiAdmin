@@ -1,0 +1,23 @@
+.home {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    padding: 0.5rem;
+    p {
+        font-size: 1.4rem;
+        color: var(--grey-color)
+    }
+    .title {
+        text-decoration: underline;
+        color: var(--red-color);
+        font-weight: bold;
+
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        span {
+            color: var(--grey-color);
+            font-style: italic;
+        }
+    }
+}
