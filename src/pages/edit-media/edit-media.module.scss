@@ -1,0 +1,39 @@
+.editProduct {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+      .inp {
+          margin: 1rem 0;
+          display: flex;
+          flex-direction: column;
+          label {
+              font-size: 14px;
+              color: var(--white-color);
+          }
+          input[type="text"] {
+              outline: none;
+              border: 1px solid var(--grey-color);
+              padding: 6px;
+          }
+      }
+      .tiny {
+          margin: 2rem 0;
+          label {
+              color: var(--white-color);
+          }
+      }
+      .addProduct {
+        width: 10rem;
+        height:2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+      h3 {
+          color: var(--red-color);
+      }
+  }
+  

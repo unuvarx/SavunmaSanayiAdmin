@@ -1,6 +1,6 @@
 import Layout from "@/lib/layout";
 import React, { useState, useEffect } from "react";
-import styles from "@/pages/edit-product/edit-product.module.scss";
+import styles from "@/pages/edit-media/edit-media.module.scss";
 import TinyMCEEditor from "@/components/editor";
 import { useRouter } from "next/router";
 

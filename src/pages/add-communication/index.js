@@ -1,6 +1,6 @@
 import Layout from "@/lib/layout";
 import React, { useState } from "react";
-import styles from "@/pages/add-certificate/add-certificate.module.scss";
+import styles from "@/pages/add-communication/add-communication.module.scss";
 
 export default function AddCommunication() {
   const [adress, setAdress] = useState("");
